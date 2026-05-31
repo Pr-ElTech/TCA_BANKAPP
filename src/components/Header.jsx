@@ -28,7 +28,7 @@ const Header = () => {
         <div className="Header_Wrapper_Right">
           <div className="header_Profile_Holder">
             <div className="Header_Profile">
-              {user.fullName.chatAt().toUpperCase}
+              {user.fullName.charAt(0).toUpperCase()}{" "}
             </div>
             <h5>{user?.fullName}</h5>
           </div>
