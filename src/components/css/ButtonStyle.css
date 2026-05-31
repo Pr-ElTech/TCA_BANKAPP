@@ -1,0 +1,90 @@
+.Btn {
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  white-space: nowrap;
+  user-select: none;
+  min-height: 44px;
+}
+
+.Btn:active {
+  transform: scale(0.98);
+}
+
+.Btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Primary Button */
+.Btn.primary {
+  background: linear-gradient(135deg, var(--primary) 0%, #0891b2 100%);
+  color: var(--white);
+  box-shadow: var(--shadow-md);
+}
+
+.Btn.primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Secondary Button */
+.Btn.secondary {
+  background: var(--gray-100);
+  color: var(--gray-700);
+  border: 2px solid var(--gray-200);
+}
+
+.Btn.secondary:hover:not(:disabled) {
+  background: var(--gray-200);
+  border-color: var(--gray-300);
+}
+
+/* Danger Button */
+.Btn.danger {
+  background: var(--danger);
+  color: var(--white);
+}
+
+.Btn.danger:hover:not(:disabled) {
+  background: #dc2626;
+  box-shadow: var(--shadow-md);
+}
+
+/* Success Button */
+.Btn.success {
+  background: var(--success);
+  color: var(--white);
+}
+
+.Btn.success:hover:not(:disabled) {
+  background: #059669;
+  box-shadow: var(--shadow-md);
+}
+
+/* Small size */
+.Btn.sm {
+  padding: 8px 16px;
+  font-size: 12px;
+  min-height: 36px;
+}
+
+/* Large size */
+.Btn.lg {
+  padding: 14px 32px;
+  font-size: 16px;
+  min-height: 48px;
+}
+
+/* Full width */
+.Btn.w-full {
+  width: 100%;
+}
