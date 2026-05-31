@@ -6,19 +6,20 @@ import SignUp from "./page/Auth/SignUp";
 import NotFound from "./components/NotFound";
 import AddAcount from "./page/Dashboard/AddAcount";
 import PrivateRoute from "./page/Auth/PrivateRoute";
+import { Toaster } from "react-hot-toast";
 
 const App = () => {
   return (
     <BrowserRouter>
+      <Toaster position="top-right" reverseOrder={false} />
       <Routes>
         <Route path="*" element={<NotFound />} />
         <Route path="/" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route element={<PrivateRoute/>}>
+        <Route element={<PrivateRoute />}>
           <Route path="/dashboard" element={<DashBoard />} />
-          <Route path="/add" element={<AddAcount/>}/>
+          <Route path="/add" element={<AddAcount />} />
         </Route>
-        
       </Routes>
     </BrowserRouter>
   );

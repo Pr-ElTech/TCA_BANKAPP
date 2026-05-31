@@ -4,6 +4,7 @@ import { AuthContext } from "../context/AuthContext.jsx";
 import { useSelector, useDispatch } from "react-redux";
 import { deleteAccount, logOut } from "../redux/usersSlice.js";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-hot-toast";
 
 const DashBoardRight = () => {
   const { fromAccount } = useContext(AuthContext);
@@ -55,6 +56,7 @@ const DashBoardRight = () => {
         onClick={() => {
           dispatch(deleteAccount(user?.id));
           dispatch(logOut());
+          toast.success("Account deleted successfully");
           navigate("/signup");
         }}
       >
