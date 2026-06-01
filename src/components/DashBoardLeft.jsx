@@ -72,7 +72,6 @@ const DashBoardLeft = () => {
         memo: memo,
       }),
     );
-    toast.success("Funds transferred successfully!");
   };
 
   const getAccountInfo = () => {

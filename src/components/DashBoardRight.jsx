@@ -56,7 +56,6 @@ const DashBoardRight = () => {
         onClick={() => {
           dispatch(deleteAccount(user?.id));
           dispatch(logOut());
-          toast.success("Account deleted successfully");
           navigate("/signup");
         }}
       >

@@ -7,7 +7,6 @@ import { AuthContext } from "../context/AuthContext.jsx";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { logOut } from "../redux/usersSlice.js";
-import { toast } from "react-hot-toast";
 
 const Header = () => {
   const user = useSelector((state) => state.users.loggedInUser);
@@ -17,7 +16,6 @@ const Header = () => {
 
   const logoutHandler = () => {
     dispatch(logOut());
-    toast.success("Logged out successfully");
     navigate("/");
   };
   return (
